@@ -1,12 +1,24 @@
 import java.net.DatagramPacket;
-import java.util.Scanner;
 
+/**
+ * Thread used to receive messages
+ * @author Ithan Velarde, Taha Mdarhri, Aichetou M'Bareck
+ */
 public class ClientReceiveThread extends Thread{
+
+    /**
+     * Client that is running this thread
+     */
     private Client client;
 
+    /**
+     * Thread constructor
+     * @param client client running this thread
+     */
     public ClientReceiveThread(Client client){
         this.client = client;
     }
+
     @Override
     public void run(){
         try {
@@ -21,7 +33,6 @@ public class ClientReceiveThread extends Thread{
                 }
             }
         }catch (Exception e){
-
         }
     }
 }

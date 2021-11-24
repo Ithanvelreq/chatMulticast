@@ -1,8 +1,21 @@
 import java.net.DatagramPacket;
 import java.util.Scanner;
 
+/**
+ * Thread used to send messages
+ * @author Ithan Velarde, Taha Mdarhri, Aichetou M'Bareck
+ */
 public class ClientSendThread extends Thread{
+
+    /**
+     * Client that is running this thread
+     */
     private Client client;
+
+    /**
+     * Thread constructor
+     * @param client client running this thread
+     */
     public ClientSendThread(Client client){
         this.client = client;
     }
@@ -28,7 +41,6 @@ public class ClientSendThread extends Thread{
                 }
             }
         }catch (Exception e){
-
         }
     }
 }
